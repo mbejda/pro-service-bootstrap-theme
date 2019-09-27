@@ -1,0 +1,678 @@
+// Directions
+$directions: left, right, top, bottom;
+
+// List Icons
+$list-icons: ("check": "\eed8", "screwdriver": "\e9b3", "arrow": "\ea6d");
+
+$light: #e0d8d9;
+$primary: #184793;
+$info: mix(white, $primary, 50%);
+$success: #69ae6d;
+$warning: #f4b536;
+$danger: #f44336;
+$secondary: #c9452d;
+$dark: #1f2d3d;
+$body-bg: mix(white, $light, 80%);
+$border-radius: 5px;
+
+
+// Navbar
+$navbar-padding-x: 0.2em;
+$navbar-padding-y: 0.2em;
+$nav-tabs-link-active-bg: $primary;
+$nav-tabs-border-radius: 1;
+
+// Jumbotron
+$jumbotron-bg: $light;
+
+// Font Variables
+$font-family-sans-serif: 'Source Sans Pro', sans-serif;
+$link-hover-decoration: none;
+$line-height-sm: 1;
+$line-height-lg: 1.5;
+
+// Breadcrumbs
+$breadcrumb-bg: transparent;
+$breadcrumb-divider-color: rgba(white, 0.5);
+$breadcrumb-active-color: white;
+$breadcrumb-color: white;
+$breadcrumb-padding-y: 0 !default;
+$breadcrumb-padding-x: 0 !default;
+$breadcrumb-item-padding-x: 0;
+$breadcrumb-margin-bottom: 0;
+
+// Button
+$input-btn-padding-y: 0.35rem;
+$btn-border-width: 3px;
+$btn-padding-y-lg: 0.4rem;
+
+// List
+$list-group-border-radius: 0;
+$list-group-border-width: 1px;
+$headings-font-weight: 700;
+
+// Card
+$card-cap-bg: transparent;
+$card-spacer-y: 0.75rem;
+$card-spacer-x: 0.75rem;
+$card-border-width: 0;
+$card-border-radius: 5px;
+
+// Navbar
+$navbar-dark-color: mix($primary, white, 60%);
+
+// Other
+$enable-caret: false;
+$enable-responsive-font-sizes: true;
+$grid-gutter-width: 10px;
+
+// Import Libraries
+@import "./_lib.scss";
+@import "~bootstrap/scss/functions", "~bootstrap/scss/variables";
+
+// Variables that use Bootstrap functions
+$nav-tabs-link-active-color: color-yiq($primary);
+$input-group-addon-bg: theme-color-level(primary, -10);
+
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Theme Variables
+$primary-header-color: $gray-200;
+$fat-padding : 8em 0;
+
+// Extended Styles
+.bg-black {
+  background-color: #1f2d3d !important;
+}
+
+// Global CSS
+a {
+  word-break: break-all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+}
+
+header {
+  background-color: $primary-header-color;
+  border-top: 1px solid lighten($primary-header-color, 20%);
+
+  .logo {
+    height: auto;
+    width: 240px;
+  }
+}
+
+.page {
+  section {
+    padding-bottom: 2em;
+    padding-top: 2em;
+    position: relative;
+
+    &:first-child {
+      padding-top: 2em;
+    }
+
+    &:last-child:not(.p-fat) {
+      padding-bottom: 2em;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0 !important;
+    }
+
+    &.p-fat {
+      padding: $fat-padding;
+    }
+
+    &.hero-section {
+      background-image: url('../img/main/hero.jpg');
+      background-position-y: -200px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 650px;
+    }
+  }
+}
+
+.map {
+  height: 500px;
+  width: 100%;
+}
+
+// Card styles
+.card {
+  @extend .shadow-sm;
+}
+
+// Text Sizes
+@for $j from 0 through 5 {
+  .text-size-#{$j} {
+    font-size: $font-size-base * $j;
+  }
+}
+
+// Border Styles
+@each $name, $value in $theme-colors {
+  @each $direction in $directions {
+    .border-#{$direction}-#{$name} {
+      border-#{$direction}: 1px solid mix(white, $value, 50%);
+    }
+  }
+
+  .bg-#{$name}-dark {
+    background-color: mix(black, $value, 60%);
+  }
+
+  .bg-#{$name}-light {
+    background-color: mix(white, $value, 60%);
+  }
+}
+
+// Form
+form {
+  label {
+    font-weight: 600;
+  }
+
+  .form-control {
+    @include transition(all 0.4s linear);
+
+    &:focus {
+      background: $gray-200;
+    }
+  }
+}
+
+// Alerts
+.alert {
+  &::before {
+    font-family: "IcoFont";
+    position: absolute;
+    right: 10px;
+    top: 2px;
+  }
+
+  &.alert-danger,
+  &.alert-warning {
+    &::before {
+      content: "\f026";
+    }
+  }
+
+  &.alert-info {
+    &::before {
+      content: "\ef4e";
+    }
+  }
+
+  &.alert-success {
+    &::before {
+      content: "\eed8";
+    }
+  }
+
+  &.alert-primary,
+  &.alert-secondary,
+  &.alert-dark,
+  &.alert-light {
+    &::before {
+      content: "\ef1c";
+    }
+  }
+
+  @each $name, $value in $theme-colors {
+    &.alert-#{$name} {
+      border-color: mix(white, $value, 70%) !important;
+    }
+  }
+}
+
+// List
+.list-group {
+  .collapse {
+    &:last-of-type {
+      @extend .border-bottom;
+    }
+  }
+
+  .list-group-item {
+    line-height: 1;
+
+    &:not(.collapsed) {
+      background-color: $gray-100;
+    }
+
+    &:first-of-type {
+      @include border-radii($border-radius, $border-radius);
+    }
+
+    i {
+      position: absolute;
+      right: 0.5rem;
+      @include transition(0.3s transform ease-in-out);
+      @include transform(rotate(-90deg));
+    }
+
+    &.collapsed {
+      i {
+        @include transform(rotate(0deg));
+      }
+    }
+  }
+}
+
+// Testimonial Styles
+@each $name, $value in $theme-colors {
+  .testimonial-#{$name} {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    img {
+      max-height: 8em;
+      width: auto;
+      padding: .25em;
+      background-color: white;
+      border: .25em solid lighten($value, 10);
+    }
+  }
+}
+
+@each $name, $value in $theme-colors {
+  .btn-#{$name} {
+    border-color: mix(white, $value, 70%);
+  }
+
+  .badge-#{$name} {
+    border: 1px solid mix(white, $value, 70%);
+  }
+
+  .badge-#{$name}-light {
+    background-color: mix(white, $value, 50%);
+    border: 1px solid mix(white, $value, 70%);
+  }
+
+  .accent-#{$name} {
+    position: relative;
+    padding-bottom: 0.3em;
+
+    &::after {
+      content: "";
+      left: 0;
+      bottom: 0;
+      background-color: mix($value, white, 90%);
+      width: 2em;
+      height: 0.2em;
+      position: absolute;
+      transform-origin: 0% 50%;
+      @include transform(scaleX(1));
+      @include transition(transform 250ms ease-in-out);
+    }
+  }
+}
+
+@each $name, $value in $theme-colors {
+  &.image-hover-#{$name} {
+    overflow: hidden;
+    position: relative;
+
+    figcaption {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $value;
+        @include opacity(0);
+        @include transform(translate3d(0, 100%, 0));
+        @include transition(opacity 0.35s, transform 0.35s);
+      }
+    }
+
+    span {
+      color: color-yiq($value);
+      position: absolute;
+      bottom: 5rem;
+      left: 0;
+      padding: 0 1.5em;
+      width: 100%;
+      @include opacity(0);
+      @include transform(translate3d(0, 110px, 0));
+      @include transition(opacity 0.35s, transform 0.35s);
+    }
+
+    a {
+      font-size: 1.3em;
+      position: absolute;
+      padding: 0 1em;
+      bottom: 0;
+      width: 100%;
+      color: darken($value, 30);
+      @include transition(transform 0.35s, color 0.35s);
+      @include transform(translate3d(0, 110%, 0));
+    }
+
+    &:hover {
+      a {
+        color: #fff;
+        @include transform(translate3d(0, 100%, 0) translate3d(0, -130px, 0));
+      }
+
+      span,
+      figcaption::before {
+        @include opacity(1);
+        @include transform(translate3d(0, 0, 0));
+      }
+    }
+  }
+}
+
+// Quote
+blockquote {
+  q,
+  p {
+    font-style: italic;
+  }
+
+  q::before {
+    content: "\efcd";
+    font-family: "IcoFont" !important;
+    @include opacity(.2);
+  }
+
+  q::after {
+    content: "\efce";
+    font-family: "IcoFont" !important;
+    @include opacity(.2);
+  }
+}
+
+// List
+ul {
+  @each $name, $value in $theme-colors {
+    &.list-#{$name} {
+      padding-left: 20px;
+      @extend .list-unstyled;
+      @include opacity(.9);
+
+      $i: 0;
+      @each $icon_name, $icon in $list-icons {
+        $i: $i + 1;
+
+        &.list-style-#{$i} {
+          li {
+            &::before {
+              font-family: "IcoFont" !important;
+              content: $icon;
+              color: $value;
+              font-weight: bold;
+              display: inline-block;
+              width: 1em;
+              margin-left: -1em;
+              margin-right: 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Tabs
+.nav {
+  &.vertical-nav-tabs {
+    display: block;
+    float: left;
+
+    .nav-item {
+      background: $gray-300;
+      position: relative;
+
+      .nav-link {
+        padding: 1em;
+
+        &.active {
+          background-color: white;
+          color: darken($primary, 50);
+          padding-left: 1.5em;
+        }
+
+        @include transition(all 0.1s ease-in-out);
+      }
+
+      &:hover {
+        background: $gray-100;
+        @include transition(all 0.1s ease-in-out);
+
+        .nav-link {
+          padding-left: 1.5em;
+          @include transition(all 0.1s ease-in-out);
+        }
+      }
+    }
+  }
+}
+
+// Counter
+.counter {
+  position: relative;
+
+  i {
+    font-size: 4em;
+    left: -10px;
+    position: absolute;
+    top: -10px;
+    z-index: 1;
+    @include opacity(.2);
+  }
+}
+
+// Nav
+.navbar {
+  .nav-item {
+    border-radius: $border-radius;
+    padding: 0 .5em;
+
+    &:hover {
+      background-color: mix(white, $primary, 10%);
+    }
+
+    &.active {
+      background-color: mix(white, $primary, 10%);
+    }
+
+    .nav-link {
+      @include transition(all 0.3s ease-in-out);
+    }
+  }
+
+  form {
+    .form-control-feedback {
+      color: #aaa;
+      display: block;
+      height: 2.375rem;
+      line-height: 2.375rem;
+      pointer-events: none;
+      position: absolute;
+      text-align: center;
+      width: 2.375rem;
+      z-index: 2;
+    }
+
+    input {
+      border: transparent;
+      border-radius: 5em;
+      padding-left: 2.375rem;
+    }
+  }
+
+  .dropdown-menu-arrow {
+    height: 0;
+    left: 50%;
+    position: relative;
+    top: -25px;
+    width: 0;
+
+    &::before,
+    &::after {
+      border-color: transparent;
+      border-style: solid;
+      border-width: 7px 8px;
+      content: "";
+      display: block;
+      height: 0;
+      position: absolute;
+      width: 0;
+      z-index: 1001;
+    }
+
+    &::before {
+      border-bottom-color: rgba(0, 0, 0, .15);
+      bottom: -17px;
+      right: -8px;
+    }
+
+    &::after {
+      border-bottom-color: #fff;
+      bottom: -18px;
+      right: -8px;
+    }
+  }
+
+  .dropdown-menu-center {
+    @include media-breakpoint-up(md) {
+      left: 50%;
+      right: auto;
+      @include transform(translate(-50%, 0));
+    }
+  }
+}
+
+// Breadcrumbs
+
+.breadcrumb {
+  left: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+
+  &::after {
+    background-color: black;
+    content: " ";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    @include opacity(.5);
+    @include border-radii($border-radius, $border-radius);
+  }
+
+  li {
+    z-index: 2;
+
+    a {
+      color: white;
+      @include opacity(.5);
+    }
+  }
+}
+
+.nav-item {
+  position: relative;
+
+  .nav-link.active::before,
+  .nav-link.active::after {
+    border-color: transparent;
+    border-style: solid;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .nav-link {
+    .active {
+      &::after {
+        border-radius: 0;
+        border-right-color: white;
+        border-top-color: white;
+        border-width: .75em;
+        @include opacity(.1);
+      }
+    }
+  }
+}
+
+/// Return To Top Button
+#return-to-top {
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 20px;
+  display: block;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  text-decoration: none;
+  width: 50px;
+  z-index: 10;
+  @extend .rounded-circle;
+  @include transition(all 0.3s linear);
+
+  i {
+    color: #fff;
+    font-size: 19px;
+    left: 16px;
+    margin: 0;
+    position: relative;
+    top: 13px;
+    @include transition(all 0.3s linear);
+  }
+
+  &:hover {
+    i {
+      color: #fff;
+      top: 10px;
+    }
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  @include transition(transform 0.3s ease-out, background-color 0.3s ease 0.1s, border-color 0.3s ease 0.1s);
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include transform(translateY(-8px));
+  }
+}
+
+// Theme Adjustments
+.author-thumbnail {
+  height: auto;
+  width: 150px;
+}
+
+.supported-payments {
+  img {
+    margin-top: 10px;
+    width: 40px;
+  }
+}
+
+.cta-img {
+  left: -10rem;
+  top: 0;
+}

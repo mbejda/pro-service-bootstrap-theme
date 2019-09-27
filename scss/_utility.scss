@@ -1,0 +1,56 @@
+$directions: left, right, top, bottom;
+
+.is-transparent {
+  background-color: transparent;
+}
+
+.is-centered {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
+.fixed-top {
+  position: fixed;
+  @include animation(slide-down 0.7s);
+}
+
+@keyframes slide-down {
+  0% {
+    @include transform(translateY(-100%));
+  }
+
+  100% {
+    @include transform(translateY(0));
+  }
+}
+
+.is-floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  from { transform: translate(0, 0); }
+  65% { transform: translate(0, 15px); }
+  to { transform: translate(0, -0); }
+}
+
+@for $j from 0 through 5 {
+  @each $direction in $directions {
+    .#{$direction}-#{$j} {
+      #{$direction}: $j;
+    }
+  }
+
+  .border-dashed-#{$j} {
+    border: $j+px dashed black;
+  }
+
+  .z-#{$j} {
+    z-index: $j;
+  }
+}
