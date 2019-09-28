@@ -17359,12 +17359,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.$ = window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_4___default.a;
+/**
+ * Used for demo purposes only. Follow this link to create your own.
+ * https://developers.google.com/maps/documentation/javascript/get-api-key
+ * @type {string}
+ */
+
+var GoogleMapsAPI = 'AIzaSyCHoEqcdenjwimHiqQ2h5vCNh1C6Qbs6Hk';
 
 try {
   load_google_maps_api__WEBPACK_IMPORTED_MODULE_0___default()({
-    key: 'AIzaSyCHoEqcdenjwimHiqQ2h5vCNh1C6Qbs6Hk'
+    key: GoogleMapsAPI
   }).then(function (googleMaps) {
-    new googleMaps.Map(document.querySelector('.map'), {
+    // eslint-disable-next-line no-new
+    new googleMaps.Map(jquery__WEBPACK_IMPORTED_MODULE_4___default()('.map').get(0), {
       center: {
         lat: 40.7484405,
         lng: -73.9944191
@@ -17377,7 +17385,8 @@ try {
 } catch (e) {}
 
 jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_4___default()('[data-toggle="tooltip"]').tooltip();
+  jquery__WEBPACK_IMPORTED_MODULE_4___default()('[data-toggle="tooltip"]').tooltip(); // Input Masking
+
   jquery__WEBPACK_IMPORTED_MODULE_4___default()('input[name="Phone"]').mask('(000) 000-0000'); // Dropdown Menu
 
   jquery__WEBPACK_IMPORTED_MODULE_4___default()('ul.nav li.dropdown').hover(function () {
@@ -17443,6 +17452,17 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 
 /***/ }),
 
+/***/ "./scss/_extra.scss":
+/*!**************************!*\
+  !*** ./scss/_extra.scss ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./scss/main.scss":
 /*!************************!*\
   !*** ./scss/main.scss ***!
@@ -17464,7 +17484,9 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../js/main */ "./js/main.js");
-/* empty/unused harmony star reexport */__webpack_require__(/*! ../scss/main.scss */ "./scss/main.scss");
+/* empty/unused harmony star reexport */__webpack_require__(/*! ../scss/_extra.scss */ "./scss/_extra.scss");
+
+__webpack_require__(/*! ../scss/main.scss */ "./scss/main.scss");
 
 
 

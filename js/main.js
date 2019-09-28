@@ -5,11 +5,18 @@ import 'bootstrap';
 import $ from 'jquery';
 window.$ = window.jQuery = $;
 
+/**
+ * Used for demo purposes only. Follow this link to create your own.
+ * https://developers.google.com/maps/documentation/javascript/get-api-key
+ * @type {string}
+ */
+const GoogleMapsAPI = 'AIzaSyCHoEqcdenjwimHiqQ2h5vCNh1C6Qbs6Hk';
 try {
   loadGoogleMapsApi({
-    key: 'AIzaSyCHoEqcdenjwimHiqQ2h5vCNh1C6Qbs6Hk'
+    key: GoogleMapsAPI
   }).then(function(googleMaps) {
-    new googleMaps.Map(document.querySelector('.map'), {
+    // eslint-disable-next-line no-new
+    new googleMaps.Map($('.map').get(0), {
       center: {
         lat: 40.7484405,
         lng: -73.9944191
@@ -25,8 +32,8 @@ try {
 
 $(function() {
   $('[data-toggle="tooltip"]').tooltip();
+  // Input Masking
   $('input[name="Phone"]').mask('(000) 000-0000');
-
 
   // Dropdown Menu
   $('ul.nav li.dropdown').hover(function() {

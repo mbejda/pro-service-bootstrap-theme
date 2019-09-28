@@ -51,12 +51,10 @@ Browser Sync  <br>
 
 ## Optional Dependencies
 `/js/presentation.js` Is a presentation Javascript file <br>
-`/scss/_prism.scss` Is a presentation SCSS file <br>
-`/scss/_docs.scss` Is a presentation SCSS file <br>
+`/scss/_extra.scss` Is a presentation SCSS file <br>
 
 
 ## Support
-If you are experiencing an issue, please submit a ticket describing the issue.
 Issue tickets should describe the problem your having in detail and should contain helpful information
 such as a screenshot or stack trace, browser version, and / or device version. 
 

@@ -1,24 +1,10 @@
-/**
-Documentation
- */
-@import "./_prism";
-@import "./_docs";
-@import "~aos/dist/aos";
-
-/**
-Effect Plugins
- */
+// plugins
 @import "~animate.css";
 @import "~hover.css/scss/hover";
 
-
-/**
-Website Assets
- */
+// theme
 @import "./_mixins.scss";
 @import "./_utility.scss";
 
-/**
-Font
- */
+// font
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap');

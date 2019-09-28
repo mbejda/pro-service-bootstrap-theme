@@ -1,9 +1,7 @@
-// Directions
-$directions: left, right, top, bottom;
-
 // List Icons
 $list-icons: ("check": "\eed8", "screwdriver": "\e9b3", "arrow": "\ea6d");
 
+// Style
 $light: #e0d8d9;
 $primary: #184793;
 $info: mix(white, $primary, 50%);
@@ -14,7 +12,6 @@ $secondary: #c9452d;
 $dark: #1f2d3d;
 $body-bg: mix(white, $light, 80%);
 $border-radius: 5px;
-
 
 // Navbar
 $navbar-padding-x: 0.2em;
@@ -91,6 +88,7 @@ a {
   word-break: break-all;
 }
 
+
 h1,
 h2,
 h3,
@@ -132,7 +130,7 @@ header {
     }
 
     &.hero-section {
-      background-image: url('../img/main/hero.jpg');
+      background-image: url('/assets/img/main/hero.jpg');
       background-position-y: -200px;
       background-repeat: no-repeat;
       background-size: cover;
@@ -141,6 +139,7 @@ header {
   }
 }
 
+// Map
 .map {
   height: 500px;
   width: 100%;
@@ -476,6 +475,8 @@ ul {
     @include opacity(.2);
   }
 }
+
+
 
 // Nav
 .navbar {
