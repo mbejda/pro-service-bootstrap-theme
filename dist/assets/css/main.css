@@ -14136,8 +14136,9 @@ a.text-dark:hover, a.text-dark:focus {
 .bg-black {
   background-color: #1f2d3d !important; }
 
-a {
-  word-break: break-all; }
+html,
+body {
+  height: 100%; }
 
 h1,
 h2,
@@ -14146,12 +14147,16 @@ h4,
 h5 {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
 
+a {
+  word-break: break-all; }
+
 header {
   background-color: #e9ecef;
   border-top: 1px solid white; }
   header .logo {
     height: auto;
-    width: 240px; }
+    width: 240px;
+    margin-top: 13px; }
 
 .page section {
   padding-bottom: 2em;
@@ -14207,10 +14212,22 @@ header {
   border-bottom: 1px solid #8ca3c9; }
 
 .bg-primary-dark {
-  background-color: #0a1c3b; }
+  background-color: #0c244a; }
+
+.bg-primary-dark-radial {
+  background: #0e2b58;
+  background: radial-gradient(ellipse at center, #0e2b58, #0c244a); }
 
 .bg-primary-light {
   background-color: #a3b5d4; }
+
+.bg-primary-light-radial {
+  background: #245098;
+  background: radial-gradient(ellipse at center, #245098, #17438c); }
+
+.bg-primary-radial {
+  background: #245098;
+  background: radial-gradient(ellipse at center, #245098, #164084); }
 
 .border-left-secondary {
   border-left: 1px solid #e4a296; }
@@ -14225,10 +14242,22 @@ header {
   border-bottom: 1px solid #e4a296; }
 
 .bg-secondary-dark {
-  background-color: #501c12; }
+  background-color: #652317; }
+
+.bg-secondary-dark-radial {
+  background: #79291b;
+  background: radial-gradient(ellipse at center, #79291b, #652317); }
 
 .bg-secondary-light {
   background-color: #e9b5ab; }
+
+.bg-secondary-light-radial {
+  background: #cc4e38;
+  background: radial-gradient(ellipse at center, #cc4e38, #bf422b); }
+
+.bg-secondary-radial {
+  background: #cc4e38;
+  background: radial-gradient(ellipse at center, #cc4e38, #b53e29); }
 
 .border-left-success {
   border-left: 1px solid #b4d7b6; }
@@ -14243,10 +14272,22 @@ header {
   border-bottom: 1px solid #b4d7b6; }
 
 .bg-success-dark {
-  background-color: #2a462c; }
+  background-color: #355737; }
+
+.bg-success-dark-radial {
+  background: #3f6841;
+  background: radial-gradient(ellipse at center, #3f6841, #355737); }
 
 .bg-success-light {
   background-color: #c3dfc5; }
+
+.bg-success-light-radial {
+  background: #71b274;
+  background: radial-gradient(ellipse at center, #71b274, #64a568); }
+
+.bg-success-radial {
+  background: #71b274;
+  background: radial-gradient(ellipse at center, #71b274, #5f9d62); }
 
 .border-left-info {
   border-left: 1px solid #c6d1e4; }
@@ -14261,10 +14302,22 @@ header {
   border-bottom: 1px solid #c6d1e4; }
 
 .bg-info-dark {
-  background-color: #384150; }
+  background-color: #465265; }
+
+.bg-info-dark-radial {
+  background: #546279;
+  background: radial-gradient(ellipse at center, #546279, #465265); }
 
 .bg-info-light {
   background-color: #d1dae9; }
+
+.bg-info-light-radial {
+  background: #92a8cc;
+  background: radial-gradient(ellipse at center, #92a8cc, #859bbf); }
+
+.bg-info-radial {
+  background: #92a8cc;
+  background: radial-gradient(ellipse at center, #92a8cc, #7e93b5); }
 
 .border-left-warning {
   border-left: 1px solid #fada9b; }
@@ -14279,10 +14332,22 @@ header {
   border-bottom: 1px solid #fada9b; }
 
 .bg-warning-dark {
-  background-color: #624816; }
+  background-color: #7a5b1b; }
+
+.bg-warning-dark-radial {
+  background: #926d20;
+  background: radial-gradient(ellipse at center, #926d20, #7a5b1b); }
 
 .bg-warning-light {
   background-color: #fbe1af; }
+
+.bg-warning-light-radial {
+  background: #f5b940;
+  background: radial-gradient(ellipse at center, #f5b940, #e8ac33); }
+
+.bg-warning-radial {
+  background: #f5b940;
+  background: radial-gradient(ellipse at center, #f5b940, #dca331); }
 
 .border-left-danger {
   border-left: 1px solid #faa19b; }
@@ -14297,10 +14362,22 @@ header {
   border-bottom: 1px solid #faa19b; }
 
 .bg-danger-dark {
-  background-color: #621b16; }
+  background-color: #7a221b; }
+
+.bg-danger-dark-radial {
+  background: #922820;
+  background: radial-gradient(ellipse at center, #922820, #7a221b); }
 
 .bg-danger-light {
   background-color: #fbb4af; }
+
+.bg-danger-light-radial {
+  background: #f54c40;
+  background: radial-gradient(ellipse at center, #f54c40, #e84033); }
+
+.bg-danger-radial {
+  background: #f54c40;
+  background: radial-gradient(ellipse at center, #f54c40, #dc3c31); }
 
 .border-left-light {
   border-left: 1px solid #f0ecec; }
@@ -14315,10 +14392,22 @@ header {
   border-bottom: 1px solid #f0ecec; }
 
 .bg-light-dark {
-  background-color: #5a5657; }
+  background-color: #706c6d; }
+
+.bg-light-dark-radial {
+  background: #868282;
+  background: radial-gradient(ellipse at center, #868282, #706c6d); }
 
 .bg-light-light {
   background-color: #f3eff0; }
+
+.bg-light-light-radial {
+  background: #e2dadb;
+  background: radial-gradient(ellipse at center, #e2dadb, #d5cdce); }
+
+.bg-light-radial {
+  background: #e2dadb;
+  background: radial-gradient(ellipse at center, #e2dadb, #cac2c3); }
 
 .border-left-dark {
   border-left: 1px solid #8f969e; }
@@ -14333,10 +14422,22 @@ header {
   border-bottom: 1px solid #8f969e; }
 
 .bg-dark-dark {
-  background-color: #0c1218; }
+  background-color: #10171f; }
+
+.bg-dark-dark-radial {
+  background: #131b25;
+  background: radial-gradient(ellipse at center, #131b25, #10171f); }
 
 .bg-dark-light {
   background-color: #a5abb1; }
+
+.bg-dark-light-radial {
+  background: #2a3847;
+  background: radial-gradient(ellipse at center, #2a3847, #1d2b3a); }
+
+.bg-dark-radial {
+  background: #2a3847;
+  background: radial-gradient(ellipse at center, #2a3847, #1c2937); }
 
 form label {
   font-weight: 600; }
@@ -14523,6 +14624,10 @@ form .form-control {
   background-color: #8ca3c9;
   border: 1px solid #bac8df; }
 
+.badge-primary-dark {
+  background-color: #0c244a;
+  border: 1px solid #07152c; }
+
 .accent-primary {
   position: relative;
   padding-bottom: 0.3em; }
@@ -14554,6 +14659,10 @@ form .form-control {
 .badge-secondary-light {
   background-color: #e4a296;
   border: 1px solid #efc7c0; }
+
+.badge-secondary-dark {
+  background-color: #652317;
+  border: 1px solid #3c150e; }
 
 .accent-secondary {
   position: relative;
@@ -14587,6 +14696,10 @@ form .form-control {
   background-color: #b4d7b6;
   border: 1px solid #d2e7d3; }
 
+.badge-success-dark {
+  background-color: #355737;
+  border: 1px solid #203421; }
+
 .accent-success {
   position: relative;
   padding-bottom: 0.3em; }
@@ -14618,6 +14731,10 @@ form .form-control {
 .badge-info-light {
   background-color: #c6d1e4;
   border: 1px solid #dde3ef; }
+
+.badge-info-dark {
+  background-color: #465265;
+  border: 1px solid #2a313c; }
 
 .accent-info {
   position: relative;
@@ -14651,6 +14768,10 @@ form .form-control {
   background-color: #fada9b;
   border: 1px solid #fce9c3; }
 
+.badge-warning-dark {
+  background-color: #7a5b1b;
+  border: 1px solid #493610; }
+
 .accent-warning {
   position: relative;
   padding-bottom: 0.3em; }
@@ -14682,6 +14803,10 @@ form .form-control {
 .badge-danger-light {
   background-color: #faa19b;
   border: 1px solid #fcc7c3; }
+
+.badge-danger-dark {
+  background-color: #7a221b;
+  border: 1px solid #491410; }
 
 .accent-danger {
   position: relative;
@@ -14715,6 +14840,10 @@ form .form-control {
   background-color: #f0ecec;
   border: 1px solid #f6f3f4; }
 
+.badge-light-dark {
+  background-color: #706c6d;
+  border: 1px solid #434141; }
+
 .accent-light {
   position: relative;
   padding-bottom: 0.3em; }
@@ -14746,6 +14875,10 @@ form .form-control {
 .badge-dark-light {
   background-color: #8f969e;
   border: 1px solid #bcc0c5; }
+
+.badge-dark-dark {
+  background-color: #10171f;
+  border: 1px solid #090e12; }
 
 .accent-dark {
   position: relative;
@@ -15744,7 +15877,7 @@ ul.list-dark {
 
 .author-thumbnail {
   height: auto;
-  width: 150px; }
+  width: 125px; }
 
 .supported-payments img {
   margin-top: 10px;

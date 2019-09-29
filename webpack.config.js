@@ -4,7 +4,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 module.exports = env => {
-
   return {
     mode: 'development',
     entry: {
@@ -45,7 +44,7 @@ module.exports = env => {
             {
               loader: 'url-loader',
               options: {
-                name: '../img/main/[name].[ext]',
+                name: '../assets/img/main/[name].[ext]',
                 limit: 8192
               }
             }
@@ -62,7 +61,7 @@ module.exports = env => {
         filename: 'assets/css/[name].css'
       }),
       new CopyWebpackPlugin([
-        { from: './img/**/*', to: './assets', force: true }
+        { from: './assets/**/*', to: './', force: true }
 
       ], { copyUnmodified: true }),
       new BrowserSyncPlugin({

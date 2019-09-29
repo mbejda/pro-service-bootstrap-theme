@@ -83,18 +83,22 @@ $fat-padding : 8em 0;
   background-color: #1f2d3d !important;
 }
 
-// Global CSS
-a {
-  word-break: break-all;
+html,
+body {
+  height: 100%;
 }
 
-
+// Global CSS
 h1,
 h2,
 h3,
 h4,
 h5 {
   text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+}
+
+a {
+  word-break: break-all;
 }
 
 header {
@@ -104,6 +108,7 @@ header {
   .logo {
     height: auto;
     width: 240px;
+    margin-top: 13px;
   }
 }
 
@@ -157,20 +162,33 @@ header {
   }
 }
 
-// Border Styles
 @each $name, $value in $theme-colors {
+  // Border Styles
   @each $direction in $directions {
     .border-#{$direction}-#{$name} {
       border-#{$direction}: 1px solid mix(white, $value, 50%);
     }
   }
 
+  // Extended Styles
   .bg-#{$name}-dark {
-    background-color: mix(black, $value, 60%);
+    background-color: mix(black, $value, 50%);
+  }
+
+  .bg-#{$name}-dark-radial {
+    @include gradient(mix(black, $value, 40%), mix(black, $value, 50%), 'circular');
   }
 
   .bg-#{$name}-light {
     background-color: mix(white, $value, 60%);
+  }
+
+  .bg-#{$name}-light-radial {
+    @include gradient(mix(white, $value, 5%), mix(black, $value, 5%), 'circular');
+  }
+
+  .bg-#{$name}-radial {
+    @include gradient(mix(white, $value, 5%), mix(black, $value, 10%), 'circular');
   }
 }
 
@@ -290,6 +308,7 @@ form {
     border-color: mix(white, $value, 70%);
   }
 
+  // Badge Borders
   .badge-#{$name} {
     border: 1px solid mix(white, $value, 70%);
   }
@@ -299,6 +318,12 @@ form {
     border: 1px solid mix(white, $value, 70%);
   }
 
+  .badge-#{$name}-dark {
+    background-color: mix(black, $value, 50%);
+    border: 1px solid mix(black, $value, 70%);
+  }
+
+  // Accents
   .accent-#{$name} {
     position: relative;
     padding-bottom: 0.3em;
@@ -476,8 +501,6 @@ ul {
   }
 }
 
-
-
 // Nav
 .navbar {
   .nav-item {
@@ -560,7 +583,6 @@ ul {
 }
 
 // Breadcrumbs
-
 .breadcrumb {
   left: 0;
   padding: 0;
@@ -663,7 +685,7 @@ ul {
 // Theme Adjustments
 .author-thumbnail {
   height: auto;
-  width: 150px;
+  width: 125px;
 }
 
 .supported-payments {

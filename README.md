@@ -1,5 +1,4 @@
-
-![Pro Service Theme](_theme/logo.svg)
+![Pro Service Theme](_meta/logo.svg)
 
 # Getting Started
 Thank you for purchasing the Pro Service Bootstrap 4 Theme. 
@@ -43,7 +42,7 @@ Browser Sync  <br>
   
 ## Directory Structure
 `/dist` theme html  <br>
-`/img` theme images <br>
+`/assets` theme images and other assets <br>
 `/js` theme javascript files <br>
 `/scss` theme styles <br>
 `/src` main webpack entry file <br>
@@ -60,6 +59,6 @@ such as a screenshot or stack trace, browser version, and / or device version.
 
 <hr>
 
-![Pro Service Theme](_theme/screenshot.png)
+![Pro Service Theme](__meta/screenshot.png)
 
 
