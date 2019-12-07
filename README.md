@@ -53,10 +53,13 @@ Browser Sync  <br>
 
 <hr>
 
-![Pro Service Theme](__meta/screenshot.png)
+![Pro Service Theme](_meta/screenshot.png)
 
-### Credits
-Questions or need help? Send me a tweet! \n
-[@notmilobejda](https://twitter.com/notmilobejda) \n
-Or checkout my blog [mbejda.com](https://mbejda.com) \n
+### :trophy: Credits
+Questions or need help? Send me a tweet!
+
+[@notmilobejda](https://twitter.com/notmilobejda)
+
+Or checkout my blog [mbejda.com](https://mbejda.com)
+
 
