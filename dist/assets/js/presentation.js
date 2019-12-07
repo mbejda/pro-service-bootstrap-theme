@@ -86,10 +86,74 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "../node_modules/aos/dist/aos.js":
-/*!***************************************!*\
-  !*** ../node_modules/aos/dist/aos.js ***!
-  \***************************************/
+/***/ "./js/presentation.js":
+/*!****************************!*\
+  !*** ./js/presentation.js ***!
+  \****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var prismjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prismjs */ "./node_modules/prismjs/prism.js");
+/* harmony import */ var prismjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prismjs__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prismjs_components_prism_j__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prismjs/components/prism-j */ "./node_modules/prismjs/components/prism-j.js");
+/* harmony import */ var prismjs_components_prism_j__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prismjs_components_prism_j__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prismjs_components_prism_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prismjs/components/prism-json */ "./node_modules/prismjs/components/prism-json.js");
+/* harmony import */ var prismjs_components_prism_json__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prismjs_components_prism_json__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prismjs_components_prism_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prismjs/components/prism-jsx */ "./node_modules/prismjs/components/prism-jsx.js");
+/* harmony import */ var prismjs_components_prism_jsx__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prismjs_components_prism_jsx__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prismjs_plugins_keep_markup_prism_keep_markup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prismjs/plugins/keep-markup/prism-keep-markup */ "./node_modules/prismjs/plugins/keep-markup/prism-keep-markup.js");
+/* harmony import */ var prismjs_plugins_keep_markup_prism_keep_markup__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prismjs_plugins_keep_markup_prism_keep_markup__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var prismjs_plugins_unescaped_markup_prism_unescaped_markup_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prismjs/plugins/unescaped-markup/prism-unescaped-markup.js */ "./node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.js");
+/* harmony import */ var prismjs_plugins_unescaped_markup_prism_unescaped_markup_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prismjs_plugins_unescaped_markup_prism_unescaped_markup_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var prismjs_plugins_show_language_prism_show_language_min_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prismjs/plugins/show-language/prism-show-language.min.js */ "./node_modules/prismjs/plugins/show-language/prism-show-language.min.js");
+/* harmony import */ var prismjs_plugins_show_language_prism_show_language_min_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prismjs_plugins_show_language_prism_show_language_min_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var prismjs_plugins_normalize_whitespace_prism_normalize_whitespace__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! prismjs/plugins/normalize-whitespace/prism-normalize-whitespace */ "./node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js");
+/* harmony import */ var prismjs_plugins_normalize_whitespace_prism_normalize_whitespace__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prismjs_plugins_normalize_whitespace_prism_normalize_whitespace__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var js_beautify__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! js-beautify */ "./node_modules/js-beautify/js/index.js");
+/* harmony import */ var js_beautify__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(js_beautify__WEBPACK_IMPORTED_MODULE_9__);
+/**
+ * Libraries
+ */
+
+
+
+
+
+
+
+
+
+
+/**
+ * AOS code for presentation
+ */
+
+aos__WEBPACK_IMPORTED_MODULE_1___default.a.init({
+  once: true
+});
+prismjs__WEBPACK_IMPORTED_MODULE_0___default.a.hooks.add('before-highlight', function (env) {
+  if (env.language === 'markup') {
+    var formatted = js_beautify__WEBPACK_IMPORTED_MODULE_9___default.a.html_beautify(env.element.innerText).replace(/(^[ \t]*\n)/gm, '');
+    env.code = formatted;
+  }
+
+  if (env.language === 'js') {
+    var _formatted = js_beautify__WEBPACK_IMPORTED_MODULE_9___default.a.js_beautify(env.element.innerText).replace(/(^[ \t]*\n)/gm, '');
+
+    env.code = _formatted;
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/aos/dist/aos.js":
+/*!**************************************!*\
+  !*** ./node_modules/aos/dist/aos.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -600,14 +664,14 @@
     refreshHard: se
   };
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "../node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
-/***/ "../node_modules/js-beautify/js/index.js":
-/*!***********************************************!*\
-  !*** ../node_modules/js-beautify/js/index.js ***!
-  \***********************************************/
+/***/ "./node_modules/js-beautify/js/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/js-beautify/js/index.js ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -678,7 +742,7 @@ function get_beautify(js_beautify, css_beautify, html_beautify) {
 
 if (true) {
   // Add support for AMD ( https://github.com/amdjs/amdjs-api/wiki/AMD#defineamd-property- )
-  !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! ./lib/beautify */ "../node_modules/js-beautify/js/lib/beautify.js"), __webpack_require__(/*! ./lib/beautify-css */ "../node_modules/js-beautify/js/lib/beautify-css.js"), __webpack_require__(/*! ./lib/beautify-html */ "../node_modules/js-beautify/js/lib/beautify-html.js")], __WEBPACK_AMD_DEFINE_RESULT__ = (function (js_beautify, css_beautify, html_beautify) {
+  !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! ./lib/beautify */ "./node_modules/js-beautify/js/lib/beautify.js"), __webpack_require__(/*! ./lib/beautify-css */ "./node_modules/js-beautify/js/lib/beautify-css.js"), __webpack_require__(/*! ./lib/beautify-html */ "./node_modules/js-beautify/js/lib/beautify-html.js")], __WEBPACK_AMD_DEFINE_RESULT__ = (function (js_beautify, css_beautify, html_beautify) {
     return get_beautify(js_beautify, css_beautify, html_beautify);
   }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -686,10 +750,10 @@ if (true) {
 
 /***/ }),
 
-/***/ "../node_modules/js-beautify/js/lib/beautify-css.js":
-/*!**********************************************************!*\
-  !*** ../node_modules/js-beautify/js/lib/beautify-css.js ***!
-  \**********************************************************/
+/***/ "./node_modules/js-beautify/js/lib/beautify-css.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/js-beautify/js/lib/beautify-css.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2576,7 +2640,9 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
     Options.prototype = new BaseOptions();
     module.exports.Options = Options;
     /***/
-  }]);
+  }
+  /******/
+  ]);
 
   var css_beautify = legacy_beautify_css;
   /* Footer */
@@ -2594,10 +2660,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
 
 /***/ }),
 
-/***/ "../node_modules/js-beautify/js/lib/beautify-html.js":
-/*!***********************************************************!*\
-  !*** ../node_modules/js-beautify/js/lib/beautify-html.js ***!
-  \***********************************************************/
+/***/ "./node_modules/js-beautify/js/lib/beautify-html.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/js-beautify/js/lib/beautify-html.js ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5937,16 +6003,18 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
     module.exports.Tokenizer = Tokenizer;
     module.exports.TOKEN = TOKEN;
     /***/
-  }]);
+  }
+  /******/
+  ]);
 
   var style_html = legacy_beautify_html;
   /* Footer */
 
   if (true) {
     // Add support for AMD ( https://github.com/amdjs/amdjs-api/wiki/AMD#defineamd-property- )
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, __webpack_require__(/*! ./beautify */ "../node_modules/js-beautify/js/lib/beautify.js"), __webpack_require__(/*! ./beautify-css */ "../node_modules/js-beautify/js/lib/beautify-css.js")], __WEBPACK_AMD_DEFINE_RESULT__ = (function (requireamd) {
-      var js_beautify = __webpack_require__(/*! ./beautify */ "../node_modules/js-beautify/js/lib/beautify.js");
-      var css_beautify = __webpack_require__(/*! ./beautify-css */ "../node_modules/js-beautify/js/lib/beautify-css.js");
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, __webpack_require__(/*! ./beautify */ "./node_modules/js-beautify/js/lib/beautify.js"), __webpack_require__(/*! ./beautify-css */ "./node_modules/js-beautify/js/lib/beautify-css.js")], __WEBPACK_AMD_DEFINE_RESULT__ = (function (requireamd) {
+      var js_beautify = __webpack_require__(/*! ./beautify */ "./node_modules/js-beautify/js/lib/beautify.js");
+      var css_beautify = __webpack_require__(/*! ./beautify-css */ "./node_modules/js-beautify/js/lib/beautify-css.js");
       return {
         html_beautify: function html_beautify(html_source, options) {
           return style_html(html_source, options, js_beautify.js_beautify, css_beautify.css_beautify);
@@ -5959,10 +6027,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
 
 /***/ }),
 
-/***/ "../node_modules/js-beautify/js/lib/beautify.js":
-/*!******************************************************!*\
-  !*** ../node_modules/js-beautify/js/lib/beautify.js ***!
-  \******************************************************/
+/***/ "./node_modules/js-beautify/js/lib/beautify.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/js-beautify/js/lib/beautify.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10212,7 +10280,9 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
 
     module.exports.TemplatablePattern = TemplatablePattern;
     /***/
-  }]);
+  }
+  /******/
+  ]);
 
   var js_beautify = legacy_beautify_js;
   /* Footer */
@@ -10230,10 +10300,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof
 
 /***/ }),
 
-/***/ "../node_modules/prismjs/components/prism-j.js":
-/*!*****************************************************!*\
-  !*** ../node_modules/prismjs/components/prism-j.js ***!
-  \*****************************************************/
+/***/ "./node_modules/prismjs/components/prism-j.js":
+/*!****************************************************!*\
+  !*** ./node_modules/prismjs/components/prism-j.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10265,10 +10335,10 @@ Prism.languages.j = {
 
 /***/ }),
 
-/***/ "../node_modules/prismjs/components/prism-json.js":
-/*!********************************************************!*\
-  !*** ../node_modules/prismjs/components/prism-json.js ***!
-  \********************************************************/
+/***/ "./node_modules/prismjs/components/prism-json.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/prismjs/components/prism-json.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10294,10 +10364,10 @@ Prism.languages.json = {
 
 /***/ }),
 
-/***/ "../node_modules/prismjs/components/prism-jsx.js":
-/*!*******************************************************!*\
-  !*** ../node_modules/prismjs/components/prism-jsx.js ***!
-  \*******************************************************/
+/***/ "./node_modules/prismjs/components/prism-jsx.js":
+/*!******************************************************!*\
+  !*** ./node_modules/prismjs/components/prism-jsx.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10423,10 +10493,10 @@ Prism.languages.json = {
 
 /***/ }),
 
-/***/ "../node_modules/prismjs/plugins/keep-markup/prism-keep-markup.js":
-/*!************************************************************************!*\
-  !*** ../node_modules/prismjs/plugins/keep-markup/prism-keep-markup.js ***!
-  \************************************************************************/
+/***/ "./node_modules/prismjs/plugins/keep-markup/prism-keep-markup.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/prismjs/plugins/keep-markup/prism-keep-markup.js ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10537,10 +10607,10 @@ Prism.languages.json = {
 
 /***/ }),
 
-/***/ "../node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js":
-/*!******************************************************************************************!*\
-  !*** ../node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js ***!
-  \******************************************************************************************/
+/***/ "./node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10727,10 +10797,10 @@ Prism.languages.json = {
 
 /***/ }),
 
-/***/ "../node_modules/prismjs/plugins/show-language/prism-show-language.min.js":
-/*!********************************************************************************!*\
-  !*** ../node_modules/prismjs/plugins/show-language/prism-show-language.min.js ***!
-  \********************************************************************************/
+/***/ "./node_modules/prismjs/plugins/show-language/prism-show-language.min.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/prismjs/plugins/show-language/prism-show-language.min.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10887,10 +10957,10 @@ Prism.languages.json = {
 
 /***/ }),
 
-/***/ "../node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.js":
-/*!**********************************************************************************!*\
-  !*** ../node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.js ***!
-  \**********************************************************************************/
+/***/ "./node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -10935,10 +11005,10 @@ Prism.languages.json = {
 
 /***/ }),
 
-/***/ "../node_modules/prismjs/prism.js":
-/*!****************************************!*\
-  !*** ../node_modules/prismjs/prism.js ***!
-  \****************************************/
+/***/ "./node_modules/prismjs/prism.js":
+/*!***************************************!*\
+  !*** ./node_modules/prismjs/prism.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11834,14 +11904,14 @@ Prism.languages.js = Prism.languages.javascript;
     self.Prism.fileHighlight();
   });
 })();
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "../node_modules/webpack/buildin/global.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
-/***/ "../node_modules/webpack/buildin/global.js":
-/*!*************************************************!*\
-  !*** ../node_modules/webpack/buildin/global.js ***!
-  \*************************************************/
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -11865,70 +11935,6 @@ try {
 
 
 module.exports = g;
-
-/***/ }),
-
-/***/ "./js/presentation.js":
-/*!****************************!*\
-  !*** ./js/presentation.js ***!
-  \****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var prismjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prismjs */ "../node_modules/prismjs/prism.js");
-/* harmony import */ var prismjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prismjs__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! aos */ "../node_modules/aos/dist/aos.js");
-/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prismjs_components_prism_j__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prismjs/components/prism-j */ "../node_modules/prismjs/components/prism-j.js");
-/* harmony import */ var prismjs_components_prism_j__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prismjs_components_prism_j__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prismjs_components_prism_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prismjs/components/prism-json */ "../node_modules/prismjs/components/prism-json.js");
-/* harmony import */ var prismjs_components_prism_json__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prismjs_components_prism_json__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prismjs_components_prism_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prismjs/components/prism-jsx */ "../node_modules/prismjs/components/prism-jsx.js");
-/* harmony import */ var prismjs_components_prism_jsx__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prismjs_components_prism_jsx__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var prismjs_plugins_keep_markup_prism_keep_markup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prismjs/plugins/keep-markup/prism-keep-markup */ "../node_modules/prismjs/plugins/keep-markup/prism-keep-markup.js");
-/* harmony import */ var prismjs_plugins_keep_markup_prism_keep_markup__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prismjs_plugins_keep_markup_prism_keep_markup__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var prismjs_plugins_unescaped_markup_prism_unescaped_markup_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prismjs/plugins/unescaped-markup/prism-unescaped-markup.js */ "../node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.js");
-/* harmony import */ var prismjs_plugins_unescaped_markup_prism_unescaped_markup_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prismjs_plugins_unescaped_markup_prism_unescaped_markup_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var prismjs_plugins_show_language_prism_show_language_min_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prismjs/plugins/show-language/prism-show-language.min.js */ "../node_modules/prismjs/plugins/show-language/prism-show-language.min.js");
-/* harmony import */ var prismjs_plugins_show_language_prism_show_language_min_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prismjs_plugins_show_language_prism_show_language_min_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var prismjs_plugins_normalize_whitespace_prism_normalize_whitespace__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! prismjs/plugins/normalize-whitespace/prism-normalize-whitespace */ "../node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js");
-/* harmony import */ var prismjs_plugins_normalize_whitespace_prism_normalize_whitespace__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prismjs_plugins_normalize_whitespace_prism_normalize_whitespace__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var js_beautify__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! js-beautify */ "../node_modules/js-beautify/js/index.js");
-/* harmony import */ var js_beautify__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(js_beautify__WEBPACK_IMPORTED_MODULE_9__);
-/**
- * Libraries
- */
-
-
-
-
-
-
-
-
-
-
-/**
- * AOS code for presentation
- */
-
-aos__WEBPACK_IMPORTED_MODULE_1___default.a.init({
-  once: true
-});
-prismjs__WEBPACK_IMPORTED_MODULE_0___default.a.hooks.add('before-highlight', function (env) {
-  if (env.language === 'markup') {
-    var formatted = js_beautify__WEBPACK_IMPORTED_MODULE_9___default.a.html_beautify(env.element.innerText).replace(/(^[ \t]*\n)/gm, '');
-    env.code = formatted;
-  }
-
-  if (env.language === 'js') {
-    var _formatted = js_beautify__WEBPACK_IMPORTED_MODULE_9___default.a.js_beautify(env.element.innerText).replace(/(^[ \t]*\n)/gm, '');
-
-    env.code = _formatted;
-  }
-});
 
 /***/ })
 

@@ -1,6 +1,6 @@
 import loadGoogleMapsApi from 'load-google-maps-api';
 import 'jquery-mask-plugin';
-import { CountUp } from 'CountUp.js';
+import { CountUp } from 'countup.js';
 import 'bootstrap';
 import $ from 'jquery';
 window.$ = window.jQuery = $;

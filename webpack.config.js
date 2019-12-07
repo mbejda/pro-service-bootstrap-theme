@@ -17,16 +17,31 @@ module.exports = env => {
     module: {
       rules: [
         {
-          test: /\.(sa|sc|c)ss$/,
+          test: /\.(scss)$/,
           use: [
             {
-              loader: MiniCssExtractPlugin.loader
+              // Adds CSS to the DOM by injecting a `<style>` tag
+              loader: 'style-loader'
             },
-            { loader: 'css-loader' },
-            { loader: 'postcss-loader', options: { sourceMap: false } },
-            'resolve-url-loader',
-            { loader: 'sass-loader', options: { sourceMap: false } }
-
+            {
+              // Interprets `@import` and `url()` like `import/require()` and will resolve them
+              loader: 'css-loader'
+            },
+            {
+              // Loader for webpack to process CSS with PostCSS
+              loader: 'postcss-loader',
+              options: {
+                plugins: function () {
+                  return [
+                    require('autoprefixer')
+                  ];
+                }
+              }
+            },
+            {
+              // Loads a SASS/SCSS file and compiles it to CSS
+              loader: 'sass-loader'
+            }
           ]
         },
         {
@@ -57,9 +72,6 @@ module.exports = env => {
     },
     devtool: 'source-map',
     plugins: [
-      new MiniCssExtractPlugin({
-        filename: 'assets/css/[name].css'
-      }),
       new CopyWebpackPlugin([
         { from: './assets/**/*', to: './', force: true }
 

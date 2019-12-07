@@ -4,8 +4,8 @@
   "private": true,
   "description": "Pro Service - Handyman Bootstrap 4 Theme",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch"
+    "build": "node_modules/.bin/webpack",
+    "watch": "node_modules/.bin/webpack --watch"
   },
   "devDependencies": {
     "@babel/core": "7.4.3",
@@ -32,15 +32,16 @@
     "stylelint-config-standard": "18.2.0",
     "stylelint-webpack-plugin": "0.10.5",
     "url-loader": "1.1.2",
-    "webpack": "4.29.6",
-    "webpack-cli": "3.3.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
     "webpack-glob-folder-entries": "1.0.0"
   },
   "dependencies": {
     "animate.css": "3.7.2",
     "aos": "3.0.0-beta.6",
-    "bootstrap": "4.3.1",
-    "countup.js": "2.0.4",
+    "bootstrap": "^4.3.1",
+    "copy-webpack-plugin": "^5.0.5",
+    "countup.js": "^2.0.4",
     "hover.css": "2.3.2",
     "jquery": "3.4.1",
     "jquery-mask-plugin": "1.14.16",
