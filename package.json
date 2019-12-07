@@ -2,10 +2,16 @@
   "name": "mbejdathemes",
   "version": "1.0.0",
   "private": false,
-  "description": "Pro Service - Handyman Bootstrap 4 Theme",
+  "license": "MIT",
+  "author": "Milos Bejda <not.milos.bejda@gmail.com> (https://mbejda.com)",
+  "description": "Pro Service - Bootstrap 4 Theme",
   "scripts": {
     "build": "node_modules/.bin/webpack",
     "watch": "node_modules/.bin/webpack --watch"
+  },
+  "homepage": "https://github.com/mbejda/pro-service-bootstrap-theme",
+  "bugs": {
+    "url": "https://github.com/mbejda/pro-service-bootstrap-theme/issues"
   },
   "devDependencies": {
     "@babel/core": "7.4.3",
