@@ -1,7 +1,7 @@
 {
   "name": "mbejdathemes",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "description": "Pro Service - Handyman Bootstrap 4 Theme",
   "scripts": {
     "build": "node_modules/.bin/webpack",

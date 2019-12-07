@@ -1,7 +1,7 @@
-![Pro Service Theme](_meta/logo.svg)
+![Pro Service Bootstrap Theme](_meta/logo.svg)
 
-# Getting Started
-Thank you for purchasing the Pro Service Bootstrap 4 Theme. 
+
+# :computer: Getting Started
 Built with Bootstrap `4.3.1`. 
 
 
@@ -25,7 +25,7 @@ Built with Bootstrap `4.3.1`.
 **Theme depends on the following icon set**
 - [IcoFont](https://icofont.com)
 
-## Commands
+## :book: Commands
 Install Dependencies  <br>
 ```
 npm install
@@ -40,25 +40,23 @@ Browser Sync  <br>
  npm run watch 
 ```
   
-## Directory Structure
+## :file_folder: Directory Structure
 `/dist` theme html  <br>
 `/assets` theme images and other assets <br>
 `/js` theme javascript files <br>
 `/scss` theme styles <br>
 `/src` main webpack entry file <br>
-
-
-## Optional Dependencies
 `/js/presentation.js` Is a presentation Javascript file <br>
 `/scss/_extra.scss` Is a presentation SCSS file <br>
 
-
-## Support
-Issue tickets should describe the problem your having in detail and should contain helpful information
-such as a screenshot or stack trace, browser version, and / or device version. 
+ 
 
 <hr>
 
 ![Pro Service Theme](__meta/screenshot.png)
 
+### Credits
+Questions or need help? Send me a tweet! \n
+[@notmilobejda](https://twitter.com/notmilobejda) \n
+Or checkout my blog [mbejda.com](https://mbejda.com) \n
 
